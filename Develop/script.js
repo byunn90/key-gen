@@ -13,17 +13,96 @@ function writePassword() {
 
 const generatePassword = function () {
   var newArray = [];
-  var numbersArray = ["1", "2", "3"];
-  var uppercaseLetters = ["A", "B", "C"];
-  var lowerCaseLetters = ["a", "b", "c", "d", "e"];
-  var specialCharacter = ["~", "!", "@", "#", "$", "%", "^", "&"];
+  var numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  var uppercaseLetters = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+  var lowerCaseLetters = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+  var specialCharacter = [
+    "~",
+    "!",
+    "@",
+    "#",
+    "$",
+    "%",
+    "^",
+    "&",
+    "*",
+    "(",
+    ")",
+    "-",
+    "_",
+    "+",
+    "=",
+    "{",
+    "}",
+    "|",
+    "/",
+    "<",
+    ">",
+    "?",
+    ",",
+  ];
 
   var passwordGenerator = "";
-  // This will choosing how big it is
+  // choosing length of the password
   var passwordLength = prompt(
     "Enter the length of your password choose a length of at least 8 characters and no more than 128 characters"
   );
-  // Must select a criteria
+
+  // condition statements
   if (passwordLength < 8 || passwordLength > 128) {
     alert("Invalid Length");
     return;
@@ -54,7 +133,7 @@ const generatePassword = function () {
     var randomIndex = Math.floor(Math.random() * newArray.length);
     var randomCharacter = newArray[randomIndex];
     passwordGenerator = passwordGenerator + randomCharacter;
-    console.log(passwordGenerator);
+    // console.log(passwordGenerator);
   }
 
   return passwordGenerator;
