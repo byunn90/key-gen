@@ -29,20 +29,24 @@ const generatePassword = function () {
     return;
   }
   var numericChoice = confirm("numeric? Yes:No");
-  if (numericChoice) {
+  if (numericChoice === true) {
     newArray = newArray.concat(numbersArray);
+  } else if (numericChoice === false) {
   }
   var UppercaseConfirm = confirm("UpperCase Letters? Yes:No");
   if (UppercaseConfirm) {
     newArray = newArray.concat(uppercaseLetters);
+  } else if (UppercaseConfirm === false) {
   }
   var lowerCaseConfirm = confirm("LowerCase Letters? Yes:No");
   if (lowerCaseConfirm) {
     newArray = newArray.concat(lowerCaseLetters);
+  } else if (lowerCaseConfirm === false) {
   }
   var special = confirm("Special Characters? Yes:No");
   if (special) {
     newArray = newArray.concat(specialCharacter);
+  } else if (special === false) {
   }
 
   for (let index = 0; index < passwordLength; index++) {
